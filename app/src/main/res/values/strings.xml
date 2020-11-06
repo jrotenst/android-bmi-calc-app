@@ -7,4 +7,13 @@
     <string name="hint_height">64</string>
     <string name="weight_pounds">Weight (pounds)</string>
     <string name="hint_weight">120</string>
+    <string name="error_msg_height_or_weight_not_valid">The height and weight must each not be empty and greater than 0.</string>
+    <string name="bmi">BMI:</string>
+    <string name="bmi_group">BMI Group:</string>
+
+    <plurals name="calcs_done">
+        <item quantity="one">Calculation done:</item>
+        <item quantity="other">Calculations done:</item>
+    </plurals>
+
 </resources>
