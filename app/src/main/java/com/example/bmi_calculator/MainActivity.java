@@ -12,16 +12,31 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    private BMICalc mBMICalc;               // model
+    private EditText mEditTextHeight, mEditTextWeight;
+    private Snackbar mSnackBar;
+    private int mCalculationsDone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupToolbar();
+        setupFAB();
+        setupFields();
+    }
+
+    private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
 
+    private void setupFAB() {
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    private void setupFields() {
+        mEditTextHeight = findViewById(R.id.et_height);
+        mEditTextWeight = findViewById(R.id.et_weight);
+        View layoutMain = findViewById(R.id.main_activity);
+        mSnackBar = Snackbar.make(layoutMain, "", Snackbar.LENGTH_INDEFINITE);
     }
 
     @Override
