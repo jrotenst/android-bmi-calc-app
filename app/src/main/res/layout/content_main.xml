@@ -26,7 +26,8 @@
 
     <EditText
         android:id="@+id/et_height"
-        style="@style/main_edit_text_style" />
+        style="@style/main_edit_text_style"
+        android:hint="72" />
 
     <!-- Weight -->
     <TextView
@@ -36,7 +37,8 @@
 
     <EditText
         android:id="@+id/et_weight"
-        style="@style/main_edit_text_style" />
+        style="@style/main_edit_text_style"
+        android:hint="180" />
 
 
 </LinearLayout>
